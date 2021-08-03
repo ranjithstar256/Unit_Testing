@@ -6,13 +6,32 @@ import org.junit.Test
 class RegistrationUtilTest {
 
     @Test
+    fun sam(){
+        assert(RegistrationUtil.validateRegistration("jhdgdfhjfgdh"
+        ,"asdasd1","asdasd1")).equals(true)
+    }
+
+    //Unit testing
+    //Module testing
+    // Appication/System
+    //User Acceptance testing
+
+    @Test
+    fun docheck(){
+        val dat= RegistrationUtil.validateRegistration("abcdcef"
+        ,"bc"
+        ,"bn")
+
+        assert(dat).equals(true)
+    }
+
+    @Test
     fun `empty username returns false`() {
         val result = RegistrationUtil.validateRegistration(
             "",
             "valid123",
             "valid123"
         )
-
         assertThat(result).isFalse()
     }
 
@@ -23,7 +42,6 @@ class RegistrationUtilTest {
             "valid123",
             "valid123"
         )
-
         assertThat(result).isTrue()
     }
 
@@ -34,7 +52,6 @@ class RegistrationUtilTest {
             "valid123",
             "valid123"
         )
-
         assertThat(result).isFalse()
     }
 
@@ -45,7 +62,6 @@ class RegistrationUtilTest {
             "",
             ""
         )
-
         assertThat(result).isFalse()
     }
 
@@ -56,8 +72,6 @@ class RegistrationUtilTest {
             "valid",
             "valid"
         )
-
         assertThat(result).isFalse()
     }
-
 }
